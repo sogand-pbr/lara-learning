@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::get('/articles/{article}', function ($article) {
+        return view('index', [
+//        storage->framework->views-> blade ha dr inja b soorat asamihash shode /tbdil template bleade be tag php qabel khoondn bra php
+            'title'=>$article,
+            'body'=>"<script>console.log('hello')</script>"
+
+    ]);
+
 });
+
