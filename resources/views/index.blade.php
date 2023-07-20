@@ -8,9 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>
-{{--        php.web -> etelaat data body az view index grfte mishe--}}
-        <h2>{{$body}}</h2>
-    </h2>
+
+{{--    @if(count($articles)==1)--}}
+{{--        <p>this is a single article</p>--}}
+{{--    @elseif(count($articles)>1)--}}
+{{--        <p>this is a few  article</p>--}}
+{{--    @else--}}
+{{--        <p>you are not here</p>--}}
+
+{{--    @endif--}}
+
+@foreach($articles as $article )
+    {{$article}} <br>
+@endforeach
 </body>
 </html>

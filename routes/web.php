@@ -17,7 +17,13 @@ use Illuminate\Support\Facades\Route;
         return view('index', [
 //        storage->framework->views-> blade ha dr inja b soorat asamihash shode /tbdil template bleade be tag php qabel khoondn bra php
             'title'=>$article,
-            'body'=>"<script>console.log('hello')</script>"
+            'status'=> false,
+            'articles'=>[
+                'article2',
+                'article1',
+
+            ]
+
 
     ]);
 
