@@ -1,25 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.master')
 
-{{--    @if(count($articles)==1)--}}
-{{--        <p>this is a single article</p>--}}
-{{--    @elseif(count($articles)>1)--}}
-{{--        <p>this is a few  article</p>--}}
-{{--    @else--}}
-{{--        <p>you are not here</p>--}}
-
-{{--    @endif--}}
-
-@foreach($articles as $article )
-    {{$article}} <br>
-@endforeach
-</body>
-</html>
+@section("content")
+    <h2>index page</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eveniet illum in necessitatibus nisi nobis quod, unde. Architecto at dicta earum laboriosam omnis quibusdam rerum tempore ut. A, assumenda illo.</p>
+@endsection
