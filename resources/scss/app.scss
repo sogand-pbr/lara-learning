@@ -1,0 +1,14 @@
+.container{
+    background-color: red;
+    h1{
+        font-size: 200px;
+    }
+}
+//go to resources -> create "scss" directory -> create "app.scss"
+//go to vite.config.js ->add "resource/scss/app.scss" in 'input: [...]'
+//open the terminal -> use "npm install"
+//install sass preprocessor in terminal -> open google -> go to 'vite document' -> go to 'features' -> go to 'css' -> find "npm add -D sass" and copy it ( or just copy it from here :) )
+//use 'npm add -D sass'
+//use 'npm run dev'
+//include "vite" in blade file -> write " vite(['resources/css/app.css', 'resources/scss/app.scss' , 'resources/js/app.js']) "
+//test app.scss 👍
