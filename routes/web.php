@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
     Route::get('/', function () {
-        return view('index');
+       return $articles = DB::table('articles')->get();
+
+//        return view('index');
 });
 
     Route::get('/about', function () {
