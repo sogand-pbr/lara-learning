@@ -14,9 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
     Route::get('/', function () {
-       return $articles = DB::table('articles')->get();
+//        $articles = DB::table('articles')->find(1);
 
-//        return view('index');
+//        $articles = DB::table('articles')->insert([
+//            "id" => "3",
+//            "title" => "article 3",
+//            "slug" => "article-3",
+//            "body" => "this vis article 3"
+//            ]);
+
+//        $articles = DB::table('articles')->where('slug' , 'article-3')->update([
+//            'body'=>"this isarticle 33"
+//        ]);
+
+//        $articles = DB::table('articles')->orderBy('id' , 'desc')->get();
+        $articles = DB::table('articles')->find(1);
+        dd($articles);
+
+    //        return view('index');
 });
 
     Route::get('/about', function () {
