@@ -17,7 +17,7 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
-        $title = fake()->realText('50');
+        $title = fake()->realText('25');
         return [
             'title' => $title,
             'slug' => str_replace(' ','-',$title),

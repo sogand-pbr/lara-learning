@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title','50');
+            $table->string('title','25');
             $table->string('slug')->unique();
-            $table->string('body','500');
-            $table->string('image')->default('null');
+            $table->text('body','500');
+            $table->string('image')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();
         });

@@ -28,10 +28,10 @@ use Illuminate\Support\Facades\Route;
 //        ]);
 
 //        $articles = DB::table('articles')->orderBy('id' , 'desc')->get();
-        $articles = DB::table('articles')->find(1);
-        dd($articles);
+//        $articles = DB::table('articles')->find(1);
+//        dd($articles);
 
-    //        return view('index');
+            return view('index');
 });
 
     Route::get('/about', function () {
@@ -43,4 +43,17 @@ use Illuminate\Support\Facades\Route;
     });
    Route::get('/welcome', function () {
         return view('welcome');
+    });
+
+
+
+Route::prefix('posts')->name('post.')->group(
+    function () {
+        Route::get('/', [\App\Http\Controllers\PostController::class,'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\PostController::class,'create'])->name('create');
+        Route::get('/show/{post}', [\App\Http\Controllers\PostController::class,'show'])->name('show');
+        Route::get('/edit/{post}', [\App\Http\Controllers\PostController::class,'edit'])->name('edit');
+        Route::post('/store', [\App\Http\Controllers\PostController::class,'store'])->name('store');
+        Route::post('/update/{post}', [\App\Http\Controllers\PostController::class,'update'])->name('update');
+        Route::get('/delete/{post}', [\App\Http\Controllers\PostController::class,'destroy'])->name('delete');
     });
