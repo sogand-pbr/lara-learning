@@ -17,7 +17,9 @@ class  ArticlesTableSeeder extends Seeder
             DB::table('articles')->insert([
                 'title'=>"article $item",
                 'slug'=>"article-$item",
-                'body'=>"this is artile $item",
+                'body'=>"this is article $item",
+                'created-at'=>now(),
+                'updated-at'=>now(),
 
             ]);
         }
