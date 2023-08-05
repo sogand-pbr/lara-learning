@@ -12,8 +12,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+    use App\Article;
 
     Route::get('/', function () {
+        $articles =\App\Models\Article::all();
 //        $articles = DB::table('articles')->find(1);
 
 //        $articles = DB::table('articles')->insert([
@@ -29,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 
 //        $articles = DB::table('articles')->orderBy('id' , 'desc')->get();
 //        $articles = DB::table('articles')->find(1);
-//        dd($articles);
+        dd($articles);
 
             return view('index');
 });
