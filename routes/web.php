@@ -64,11 +64,11 @@ Route::prefix('admin')->group(function (){
             return view('admin.articles.create');
        });
     Route::post('/article/create' , function (){
-        dd("test");
+        dd($_POST);
 
     });
 
-    });
+         });
 
 
 
